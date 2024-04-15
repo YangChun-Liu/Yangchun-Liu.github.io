@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Yancy's Page</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/loadImg.js"></script>
+    <link rel="shortcut icon" href="last/images/spiderman_stick.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Rambla:400,700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/et-lineicons.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />    
+    <link rel="stylesheet" href="css/justifiedGallery.min.css" />
+    <link rel="stylesheet" href="css/justifiedGallery.css" />
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+</head>
+<body>
+    <div id="lonon-page">
+        <a href="#" class="js-lonon-nav-toggle lonon-nav-toggle"><i></i></a>
+        <!-- Sidebar Section -->
+        <aside id="lonon-aside">
+            <!-- Logo -->
+            <h1 id="lonon-logo"><img src="images/profile.jpg" alt="" /><br /><a href="index.html">Liu Yangchun<span>ZJU</span></a></h1>
+            <!-- Menu -->
+            <nav id="lonon-main-menu">
+                <ul>
+                    <li class="lonon-active"><a href="index.html">Home</a></li>                    
+                    <li><a href="resume.html">Resume</a></li>
+                    <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
+                    <!-- <li><a href="life.html">Life</a></li> -->
+                    <li><a href="./last/file">Resource</a></li>
+                    <li><a href="photograph.html">Photograph</a></li>
+                    <!-- <li><a href="blog.html">Blog</a></li> -->
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="last/index.html" target="_blank">Last</a></li>
+                </ul>
+            </nav>
+            <!-- Sidebar Footer -->
+            <div class="lonon-footer">
+                <ul>
+                    <li><a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1353690562"><i class="ti-linux font-17px gray-icon"></i></a></li>
+                    <li><a href="https://github.com/YangChun-Liu"><i class="ti-github font-17px gray-icon"></i></a></li>
+                    <!-- <li><a href="https://gitee.com/H874589148"><i class="ti-android font-17px gray-icon"></i></a></li> -->
+                    <li><a href="mailto:yangchun_liu@zju.edu.cn"><i class="ti-email font-17px gray-icon"></i></a></li>
+                    <li><a href="tel:18707072787"><i class="ti-mobile font-17px gray-icon"></i></a></li>
+                </ul>
+                <!-- <ul>
+                    <li>You are the<IMG style="height:20px ;width:110px;" SRC="/cgi-bin/Count.cgi?df=hr874589148.dat&dd=A&md=7&ft=3">visitor</li>
+                </ul> -->
+                <p><small>&copy; 2021 Hu Rui</small></p>
+            </div>
+        </aside>
+        <!-- Main Section -->
+        <div id="lonon-main">
+            <!-- About Us -->
+            <div class="lonon-about">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="heading-meta style-1">Landscape</span>
+                            <h2 class="lonon-heading animate-box" data-animate-effect="fadeInLeft">Photographes</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Gallery    traditional way         -->
+            <!-- <div id="basicExample" class="justified-gallery">
+                <a href="images/gallery/Jan.jpg">
+                    <img alt="caption for image 1" src="images/gallery/Jan.jpg"/>
+                </a>
+                <a href="images/gallery/Feb.jpg">
+                    <img alt="caption for image 2" src="images/gallery/Feb.jpg"/>
+                </a>
+                <a href="images/gallery/Mar.jpg">
+                    <img alt="caption for image 2" src="images/gallery/Mar.jpg"/>
+                </a>
+                <a href="images/gallery/Apr.jpg">
+                    <img alt="caption for image 2" src="images/gallery/Apr.jpg"/>
+                </a>
+                <a href="images/gallery/May.jpg">
+                    <img alt="caption for image 2" src="images/gallery/May.jpg"/>
+                </a>
+                <a href="images/gallery/Jun.jpg">
+                    <img alt="caption for image 2" src="images/gallery/Jun.jpg"/>
+                </a>
+                <a href="images/gallery/Jul.jpg">
+                    <img alt="caption for image 2" src="images/gallery/Jul.jpg"/>
+                </a>
+                <a href="images/gallery/Aug.jpg">
+                    <img alt="caption for image 2" src="images/gallery/Aug.jpg"/>
+                </a>
+                <a href="images/gallery/Sep.jpg">
+                    <img alt="caption for image 2" src="images/gallery/Sep.jpg"/>
+                </a>
+                <a href="images/gallery/Oct.jpg">
+                    <img alt="caption for image 2" src="images/gallery/Oct.jpg"/>
+                </a>
+                <a href="images/gallery/Nov.jpg">
+                    <img alt="caption for image 2" src="images/gallery/Nov.jpg"/>
+                </a>
+                <a href="images/gallery/Dec.jpg">
+                    <img alt="caption for image 2" src="images/gallery/Dec.jpg"/>
+                </a>                
+            </div> -->
+
+            <!-- Gallery    new way         -->
+
+            <div id="basicExample" class="justified-gallery"></div>
+            <script>
+                getPhotos("./gallery.xml","gallery");
+            </script>
+
+            <script>
+                $(document).ready(function() {
+                    $("#basicExample").justifiedGallery(); 
+                });
+            </script>
+
+            <!-- Footer -->
+            <div id="lonon-footer2">
+                <div class="lonon-narrow-content">
+                    <div class="row">
+                        <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+                            <p class="lonon-lead">&copy; 2021 Hu Rui. All rights reserved</p>
+                        </div>
+                        <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+                            <h2 class="text-center">Liu Yangchun</h2>
+                        </div>
+                        <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+                            <ul class="social-network">
+                                <li><a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1353690562"><i class="ti-linux font-17px gray-icon"></i></a></li>
+                                <li><a href="https://github.com/YangChun-Liu"><i class="ti-github font-17px gray-icon"></i></a></li>
+                                <!-- <li><a href="https://gitee.com/H874589148"><i class="ti-android font-17px gray-icon"></i></a></li> -->
+                                <li><a href="mailto:yangchun_liu@zju.edu.cn"><i class="ti-email font-17px gray-icon"></i></a></li>
+                                <li><a href="tel:18707072787"><i class="ti-mobile font-17px gray-icon"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Js -->        
+        <script src="js/modernizr-2.6.2.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/sticky-kit.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/jquery.justifiedGallery.js"></script>
+        <script src="js/jquery.justifiedGallery.min.js"></script>
+    </div>
+</body>
+</html>
