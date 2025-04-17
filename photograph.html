@@ -6,6 +6,11 @@
     <title>Yancy's Page</title>
     <script src="js/jquery.min.js"></script>
     <script src="js/loadImg.js"></script>
+    <script src="js/jquery.colorbox.js"></script>
+    <!-- <script src="js/jquery.swipebox.min.js"></script> -->
+    <!-- <script src="js/lightgallery.min.js"></script> -->
+    <!-- <script src="js/lg-thumbnail.min.js"></script> -->
+    <!-- <script src="js/lg-fullscreen.min.js"></script> -->
     <link rel="shortcut icon" href="last/images/spiderman_stick.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="images/favicon.png" />
@@ -16,7 +21,8 @@
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/style.css" />    
     <link rel="stylesheet" href="css/justifiedGallery.min.css" />
-    <link rel="stylesheet" href="css/justifiedGallery.css" />
+    <link rel="stylesheet" href="css/lightgallery.css" />
+    <link rel="stylesheet" href="css/colorbox.css" />
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
 </head>
@@ -30,15 +36,15 @@
             <!-- Menu -->
             <nav id="lonon-main-menu">
                 <ul>
-                    <li class="lonon-active"><a href="index.html">Home</a></li>                    
+                    <li><a href="index.html">Home</a></li>                    
                     <li><a href="resume.html">Resume</a></li>
                     <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
                     <!-- <li><a href="life.html">Life</a></li> -->
-<!--                     <li><a href="./last/file">Resource</a></li> -->
-                    <li><a href="photograph.html">Photograph</a></li>
+                    <!-- <li><a href="./last/file">Resource</a></li> -->
+                    <li class="lonon-active"><a href="photograph.html">Photograph</a></li>
                     <!-- <li><a href="blog.html">Blog</a></li> -->
                     <li><a href="contact.html">Contact</a></li>
-<!--                     <li><a href="last/index.html" target="_blank">Last</a></li> -->
+                    <!-- <li><a href="last/index.html" target="_blank">Last</a></li> -->
                 </ul>
             </nav>
             <!-- Sidebar Footer -->
@@ -112,16 +118,46 @@
 
             <!-- Gallery    new way         -->
 
-            <div id="basicExample" class="justified-gallery"></div>
+            <!-- justified-gallery -->
+            <div id="basicExample"></div>
             <script>
                 getPhotos("./gallery.xml","gallery");
-            </script>
-
-            <script>
+            </script>            
+            <!-- <script>
                 $(document).ready(function() {
                     $("#basicExample").justifiedGallery(); 
                 });
+            </script>  -->
+            
+            <!-- colorbox -->
+            <script>
+                $(document).ready(function() {
+                    $('#basicExample').justifiedGallery({
+                        lastRow : 'nojustify', 
+                        rowHeight : 120, 
+                        rel : 'gallery1', //replace with 'gallery1' the rel attribute of each link
+                        margins : 1
+                    }).on('jg.complete', function () {
+                        $(this).find('a').colorbox({                            
+                            maxWidth : '90%',
+                            maxHeight : '90%',
+                            opacity : 0,
+                            transition : 'fade',
+                            current : ''
+                        });
+                    });
+                });
             </script>
+                       
+
+            <!-- lightgallery -->
+            <!-- <div id="basicExample"></div>
+            <script>
+                getPhotos("./gallery.xml","gallery");
+            </script>
+            <script>
+                lightGallery(document.getElementById('basicExample'));
+            </script> -->
 
             <!-- Footer -->
             <div id="lonon-footer2">
