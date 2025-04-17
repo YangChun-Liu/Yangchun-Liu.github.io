@@ -1576,7 +1576,7 @@ ul.social-network li {
 
 /* Animations for Skills Progress Bar */
 .bar-fill-developer {
-    width: 25%;
+    width: 70%;
     background-color: #0556BF;
     animation: bar-fill-developer 2s ease-out;
     -moz-animation: bar-fill-developer 2s ease-out;
@@ -1614,7 +1614,7 @@ ul.social-network li {
 }
 
 .bar-fill-photoshop {
-    width: 40%;
+    width: 70%;
     background-color: #0556BF;
     animation: bar-fill-photoshop 2s ease-out;
     -moz-animation: bar-fill-photoshop 2s ease-out;
@@ -1652,7 +1652,7 @@ ul.social-network li {
 }
 
 .bar-fill-webdesign {
-    width: 60%;
+    width: 80%;
     background-color: #0556BF;
     animation: bar-fill-webdesign 2s ease-out;
     -moz-animation: bar-fill-webdesign 2s ease-out;
@@ -1690,7 +1690,7 @@ ul.social-network li {
 }
 
 .bar-fill-socialmedia {
-    width: 70%;
+    width: 90%;
     background-color: #0556BF;
     animation: bar-fill-socialmedia 2s ease-out;
     -moz-animation: bar-fill-socialmedia 2s ease-out;
